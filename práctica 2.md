@@ -38,14 +38,14 @@ Status: Done
    Un ejemplo de palabra reservada en JavaScript es **`var`**. Esta palabra se utiliza para declarar una variable en JavaScript, por lo que no puede ser utilizada como nombre de variable. Otros ejemplos de palabras reservadas en JavaScript incluyen **`if`**, **`else`**, **`while`**, **`for`**, **`function`**, **`return`**, **`true`**, **`false`**, **`null`**, **`undefined`**, **`try`**, **`catch`**, **`throw`**, **`typeof`**, entre otras.
 
 5. ```bnf
-               G= ( N, T, S, P)
-               N = {<numero_entero>, <digito> }
-               T = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-               S = <numero_entero>
-               P = {
-               <numero_entero>::=<digito><numero_entero> | <numero_entero><digito> | <digito>
-               <digito> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-               }
+                  G= ( N, T, S, P)
+                  N = {<numero_entero>, <digito> }
+                  T = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+                  S = <numero_entero>
+                  P = {
+                  <numero_entero>::=<digito><numero_entero> | <numero_entero><digito> | <digito>
+                  <digito> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+                  }
    ```
 
    a. Los componentes de la misma son:
@@ -140,8 +140,8 @@ P = {
     P = {
     	<id> ::= <letra>{<caracter>}*
     	<caracter> ::= (<letra> | <dig>)
-    	<letra> ::= a | ... | z | A | ... | Z
-    	<dig> ::= 0 | ... | 9
+    	<letra> ::= (a | ... | z | A | ... | Z)
+    	<dig> ::= (0 | ... | 9)
     }
     ```
 
