@@ -11,7 +11,8 @@
     b.
     | Identificador | Lvalor | Rvalor | Alcance | T. vida |
     | --- | --- | --- | --- | --- |
-    | p | dinámica | puntero a i y luego punto a a | 4-16 | 1-16 |
+    | p | automática | direcciones | 4-16 | 1-16 |
+    | p^ | dinámica | puntero a i y luego punto a a | 4-16 | 7-14 |
 
     ![Untitled](img/tp4-1.png)
 
@@ -135,12 +136,12 @@
     En resumen, la versión original del archivo y la versión modificada con la declaración de **`x` c**omo **`static int x = 1;`** tendrán un comportamiento diferente en cuanto a la alocación de memoria. En la versión original, la variable **`x`**será global y persistirá durante toda la ejecución del programa, mientras que en la versión modificada, la variable **`x`**será local estática y solo estará disponible dentro de la función **`func1()`.**
 
 7.  ![Untitled](img/tp4-ej7.png)
-8.  | Identificador | Tipo           | Alcance  | T. vida         |
-    | ------------- | -------------- | -------- | --------------- |
-    | tpuntero      | dinámico (f)   | 2-15     | 1-15            |
-    | mipuntero     | dinámico (f)   | 3-15 (b) | 1-8, 9-15 ? (a) |
-    | i             | automático (f) | 4-15 (b) | 1-15 (a)        |
-    | h             | automático (f) | 5-15 (b) | 1-15 (a)        |
+8.  | Identificador | Tipo           | Alcance  | T. vida  |
+    | ------------- | -------------- | -------- | -------- |
+    | mipuntero     | automático (f) | 3-15 (b) | 3-15     |
+    | mipuntero\*   | dinámico (f)   | 3-15 (b) | 9-12 (a) |
+    | i             | automático (f) | 4-15 (b) | 1-15 (a) |
+    | h             | automático (f) | 5-15 (b) | 1-15 (a) |
 
     c. No presenta error ya que **mipuntero^** indica el valor entero de la dirección de dicho puntero.
 

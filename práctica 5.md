@@ -21,7 +21,7 @@
 
    2. ![Untitled](img/tp5-ej2d.png)
 
-3. //CONSULTAR SI LOS WRITE HAY QUE ESCRIBIRLOS
+3. //CONSULTAR SI LOS WRITE HAY QUE ESCRIBIRLOS — si, al costadito hay que poner lo que imprime
 
    1. ![Untitled](img/tp5-ej3e.png)
 
@@ -39,4 +39,4 @@
 
    2. ![Untitled](img/tp5-ej5d.png)
 
-   3. Si, es lo mismo puesto que c siempre va a ser un valor obtenible ya sea de la función c o de la variable c que está en el procedure C.
+   3. No es lo mismo debido a que según el orden puede variar sobre quién busca los datos.
