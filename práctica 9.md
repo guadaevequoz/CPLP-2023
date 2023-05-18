@@ -140,10 +140,63 @@
 
    En Python, no existe una construcción directa equivalente al **`switch`** de C. En su lugar, se suele utilizar una serie de declaraciones **`if-elif-else`** para expresar múltiples selecciones en Python.
 
-7. 1. 🥱
+7. 1. Pascal estándar "no permite" que se modifiquen los valores del límite inferior, límite superior, ni del valor de la variable de control. Como el procedimiento `A` modifica la variable de control esto hará efecto colateral (o el error: `Error: Illegal assignment to for-loop variable "i"`, no estoy segura //CONSULTAR).
+
+      En ADA la variable del `for` es considerada como variable local, por lo cual en A no se modifica.
+
    2. 😴
 
-8. 🛌🏻
+8. ```pascal
+   var puntos: integer;
+   begin
+   case puntos
+   	1..5: write(“No puede continuar”);
+   	10:write(“Trabajo terminado”)
+   end;
+   ```
+
+   En el caso de Ada, la estructura **`case`** es conocida como **`case statement`**. Para trasladar el código a Ada, se debe utilizar la sintaxis adecuada y tener en cuenta algunas diferencias:
+
+   ```pascal
+   puntos: integer;
+   begin
+   ...
+   case puntos is
+      when 1..5 =>
+         put("No puede continuar");
+      when 10 =>
+         put("Trabajo terminado");
+   end case;
+   ...
+   ```
+
+   En Ada, se utiliza **`is`** después de **`case puntos`** para indicar que se está realizando una comparación. Además, se utiliza **`=>`** en lugar de **`:`** para especificar la acción a realizar cuando se cumple cada caso.
+
+   En el caso de C, la estructura equivalente es el **`switch`**. Sin embargo, en C, la sintaxis de **`case`** no permite rangos directamente. Por lo tanto, se deben utilizar sentencias individuales **`case`** para cada valor o combinar múltiples **`case`**:
+
+   ```c
+   int puntos;
+   ...
+   switch (puntos) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+         printf("No puede continuar");
+         break;
+      case 10:
+         printf("Trabajo terminado");
+         break;
+      default:
+         // Acción por defecto
+         break;
+   }
+   ...
+   ```
+
+   En este caso, se enumeran los casos individuales de 1 a 5 para que tengan el mismo comportamiento. La sentencia **`break`** se utiliza para salir del **`switch`** después de cada caso. La sección **`default`** se utiliza para especificar una acción por defecto en caso de que ninguno de los casos coincida.
+
 9. La diferencia principal entre el generador **`yield`** de Python y la declaración **`return`** en una función es que **`yield`** permite la generación de valores de forma iterativa, mientras que **`return`** finaliza la ejecución de una función y devuelve un valor final.
 
    Cuando se utiliza **`yield`** en una función, esta se convierte en un generador. El generador puede pausar su ejecución en cada iteración y generar un valor que se devuelve al iterador que lo llamó. Luego, en la siguiente iteración, el generador continúa su ejecución a partir del punto donde se detuvo y produce el siguiente valor. Este proceso de pausa y reanudación puede ocurrir varias veces hasta que se agoten los valores o se alcance una condición de finalización.
