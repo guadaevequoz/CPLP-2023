@@ -1,4 +1,5 @@
 # Práctica 8
+# Excepciones 
 
 1. Una excepción es una situación inesperada o inusual que surge durante la ejecución de un programa y no puede ser manejada en el contexto actual. 
 2. Un lenguaje debería proveer un mecanismo para el manejo de excepciones. Debe permitir que los programadores puedan lanzar excepciones explícitamente en su código cuando detecten una situación excepcional o un error. También debe permitir la captura de excepciones para manejarlas de forma adecuada. Un lenguaje debería permitir la definición de diferentes tipos de excepciones ayudando a clasificar las excepciones en categorías más específicas. 
