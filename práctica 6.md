@@ -108,23 +108,22 @@
       End.
       ```
     - Expresión: Se evalúa cada vez.
-7.  1.  ![Untitled](/img/tp6-7.png)
+7.  1. Cuando es por nombre tengo que tomar SIEMPRE los valores del contexto de la variable original, de su ambiente.
+       ![Untitled](/img/tp6-7.png)
 
-    2.  Creo que la dinámica es igual así que ni ganas de hacerla.
+    2. Creo que la dinámica es igual así que ni ganas de hacerla.
 
-8.  // **_Qué es deep y shallow?_**
-9.  **_// Preguntar si a(x) esta bien tomarlo siempre diferente si x cambia dentro del procedimiento !!_**
+8.  Deep busca por los parámetros de la cadena estática y shallow por dinámica.
+9.  1. Si se pasa por `nombre` los valores impresos serían: `[3,2,0,1,1]`. En este tipo de pasaje de parámetros, el parámetro formal es sustituido textualmente por el parámetro real, se hace siempre alusión al parámetro real y todo su contexto.
 
-    1. Si se pasa por nombre los valores impresos serían: [3, 2, 0, 1, 1].
+       Si se pasa por `referencia` los valores serían: `[1,1,3,1,1]`. En este tipo de pasaje de parámetros, se pasa la referencia o dirección de memoria de un objeto o variable en lugar de su valor. Los cambios realizados en la función a los parámetros pasados por referencia afectarán el objeto o variable original fuera de la función.
 
-       Si se pasa por referencia los valores serían: [3, 2, 0, 1, 1].
-
-       Si se pasa por valor resultado los valores serían: [3, 2, 0, 1, 1].
+       Si se pasa por `valor resultado` los valores serían: `[1,1,4,1,1]`. En este tipo de pasaje de parámetros, se pasa el valor de un parámetro a la función y la función devuelve un valor resultante al finalizar. Los cambios realizados en la función no afectarán el valor original fuera de la función, a menos que se asigne explícitamente el valor de retorno.
 
     2. Si se agrega la declaración de `x` dentro de Uno los valores serían:
-       - Por nombre: [1, 1, 3, 1, 1].
-       - Por referencia: [1, 1, 3, 1, 1].
-       - Por valor resultado: [1, 1, 3, 1, 1].
+       - Por nombre: `[1,1,3,1,1]`.
+       - Por referencia: `[1,1,3,1,1]`.
+       - Por valor resultado: `[1,1,4,1,1]`.
 
 10. 1. En este punto consideré si era por link estático y por link dinámico, pero tengo que corregirlo porque capaz está mal pensado.
 
