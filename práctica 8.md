@@ -65,6 +65,8 @@
         	x = 4;
         	b2 = true;
         	b1 = false;
+            // el manejador 2 deberia estar acá porque sino se rompe todo
+            ON CONDITION Manejador2 begin
         	if(b1 = false) then SIGNAL CONDITION Manejador2;
         	P;
         	PUT SKIP LIST(x);	
